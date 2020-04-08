@@ -1,4 +1,4 @@
-IMAGE=$1
+IMAGE=$(echo $1 | sed 's/\//\\\//g')
 COMPOSE_FILE=$2
 PROJECT_DIR=$3
 
