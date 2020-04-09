@@ -1,7 +1,7 @@
 
 IMAGE=$(echo $1 | sed 's/\//\\\//g')
 COMPOSE_FILE=$2
-PROJECT_DIR=$3
+PROJECT_DIR=$(echo $3 | sed 's/\//\\\//g')
 REMOTE_BRANCH=$4
 
 
