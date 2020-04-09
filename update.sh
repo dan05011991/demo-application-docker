@@ -7,7 +7,7 @@ REMOTE_BRANCH=$4
 
 SNAPSHOT=$(mvn -f $PROJECT_DIR/pom.xml -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
 
-sed -i -E "s/$IMAGE.+/$IMAGE$SNAPSHOT/" $COMPOSE_FILE
+sed -i -E 's/$IMAGE.+/$IMAGE$SNAPSHOT/' $COMPOSE_FILE
 
 if [ $(git diff | wc -l) -gt 0 ]; then
     git add docker-compose.yaml
