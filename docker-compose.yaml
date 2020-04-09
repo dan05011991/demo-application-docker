@@ -7,7 +7,7 @@ services:
     networks:
       - demo
   backend:
-    image: dan05011991/demo-backend:0.0.93-SNAPSHOT
+    image: dan05011991/demo-backend:0.0.94-SNAPSHOT
     ports:
       - "8090:8090"
     networks:
