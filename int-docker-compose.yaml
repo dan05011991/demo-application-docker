@@ -1,0 +1,16 @@
+version: "2"
+services:
+  webapp:
+    image: dan05011991/demo-frontend:1.0.10
+    ports:
+      - "9999:80"
+    networks:
+      - demo
+  backend:
+    image: dan05011991/demo-backend:0.0.121-SNAPSHOT
+    ports:
+      - "8090:8090"
+    networks:
+      - demo
+networks:
+  demo:
