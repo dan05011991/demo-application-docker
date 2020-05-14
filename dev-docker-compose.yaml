@@ -13,7 +13,7 @@ services:
     networks:
       - demo
   backend:
-    image: dan05011991/demo-backend:2.17.0
+    image: dan05011991/demo-backend:2.30.0
     ports:
       - "8090:8090"
     networks:
